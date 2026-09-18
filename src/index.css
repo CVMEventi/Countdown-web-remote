@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-size-10xl: 10rem;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  .input {
+    @apply border-0 rounded-lg px-3 py-1 bg-zinc-700 text-white;
+  }
+}
+
+.input-big {
+  @apply text-5xl;
+}
+
+.disabled {
+  @apply text-gray-700;
+}
+
+.input-number-fixed {
+  @apply w-24 text-center border-0 font-mono;
+}
+
+@font-face {
+  font-family: digital-7;
+  src: url("./assets/fonts/digital-7.woff2");
+}
+
+html, body, #app {
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  @apply overflow-x-hidden;
+}
