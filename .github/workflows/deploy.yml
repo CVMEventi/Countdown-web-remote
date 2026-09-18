@@ -23,7 +23,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
 
       # Yarn 4 comes from the packageManager field, so corepack has to run after node is installed
       - run: corepack enable
